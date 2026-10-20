@@ -1,0 +1,79 @@
+/* Custom USP Color variables */
+:root {
+    --usp-dark: #0f172a;
+    --usp-teal: #0d9488;
+    --usp-green: #16a34a;
+}
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    transition: background 0.3s, color 0.3s; 
+}
+
+/* ================= THEME: LIGHT TILT ================= */
+body.theme-light-tilt {
+    background: linear-gradient(170deg, #f8f9fa 50%, #e9ecef 50%);
+    color: #2d3748;
+}
+body.theme-light-tilt .portal-card { 
+    background: rgba(255,255,255,0.95); 
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); 
+    border-top: 4px solid var(--usp-teal); 
+}
+
+/* ================= THEME: WHITE ================= */
+body.theme-white { 
+    background-color: #f3f4f6; 
+    color: #1f2937; 
+}
+body.theme-white .portal-card { 
+    background: #ffffff; 
+    border: 1px solid #e5e7eb; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+    border-top: 4px solid var(--usp-green);
+}
+
+/* ================= THEME: DARK TILT ================= */
+body.theme-dark-tilt {
+    background: linear-gradient(170deg, #0f172a 50%, #1e293b 50%);
+    color: #f1f5f9;
+}
+body.theme-dark-tilt .portal-card { 
+    background: #1e293b !important; 
+    border-top: 4px solid var(--usp-teal); 
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.7); 
+}
+body.theme-dark-tilt input, 
+body.theme-dark-tilt select, 
+body.theme-dark-tilt textarea { 
+    background: #0f172a !important; 
+    color: #f1f5f9 !important; 
+    border-color: #334155 !important; 
+}
+body.theme-dark-tilt .bg-white,
+body.theme-dark-tilt .bg-gray-50 { 
+    background-color: #1e293b !important; 
+    color: #f1f5f9 !important;
+}
+body.theme-dark-tilt .text-gray-800,
+body.theme-dark-tilt .text-gray-700,
+body.theme-dark-tilt .text-gray-600 { 
+    color: #cbd5e1 !important; 
+}
+body.theme-dark-tilt .border-gray-200 { 
+    border-color: #334155 !important; 
+}
+
+/* General Styles */
+.hidden { display: none !important; }
+.tab-btn.active { border-bottom: 2px solid var(--usp-teal); color: var(--usp-teal); font-weight: 600; }
+
+#chatbot-window {
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(100%);
+}
+#chatbot-window.open { transform: translateY(0); }
+
+/* Loader */
+.loader { border: 3px solid #f3f3f3; border-top: 3px solid var(--usp-green); border-radius: 50%; width: 20px; height: 20px; animation: spin 1s linear infinite; display: inline-block; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }

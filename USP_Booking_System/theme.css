@@ -1,0 +1,91 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --card-bg: #f9f9f9;
+    --primary-color: #00563B; /* USP Green */
+}
+
+[data-theme="dark-tilt"] {
+    --bg-color: linear-gradient(135deg, #121212 0%, #1e293b 100%);
+    --text-color: #f1f5f9;
+    --card-bg: rgba(30, 41, 59, 0.8);
+    --primary-color: #0ea5e9;
+}
+
+[data-theme="light-tilt"] {
+    --bg-color: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    --text-color: #334155;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --primary-color: #059669;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.theme-switcher {
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.login-card, .card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+}
+
+.login-card {
+    width: 350px;
+    margin-top: 50px;
+}
+
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; }
+.form-group input { 
+    width: 100%; 
+    padding: 8px; 
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn.disabled { background: #64748b; cursor: not-allowed; }
+
+.dashboard-header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background: var(--card-bg);
+    box-sizing: border-box;
+}
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 80vw;
+    margin-top: 20px;
+}
